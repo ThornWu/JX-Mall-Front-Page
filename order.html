@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>京西商城 - 智·享·生·活</title>
+        <link rel="stylesheet" href="css/top_bottom_style.css"></link>
+        <link rel="stylesheet" href="css/order_style.css"></link>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <style>
+            .header .top_nav, .header .main_nav .init_main,.header .fixed_nav,.footer{
+                min-width: 1300px!important;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="header" id="top">
+            <div class="top_nav">
+                <div class="top_row">
+                    <img src="images/slogan.png">
+                    <div class="right">
+                        <div class="before_login">
+                            <a href="javascript:">登录</a>
+                            <a href="javascript:">注册</a>
+                        </div>
+                        <div class="after_login">
+                            <div class="user_center" onmouseover="rotate_arrow(0)" onmouseout="reset_arrow(0)">
+                                <a href="javascript:">
+                                    <span class="nickname">thornwu</span>
+                                </a>
+                                <div class="drop_down_block">
+                                    <div class="drop_down_menu">
+                                        <a class="drop_down_item" href="javascript:">个人中心</a>
+                                        <a class="drop_down_item" href="javascript:">订单管理</a>
+                                        <a class="drop_down_item" href="javascript:">商品收藏</a>
+                                        <a class="drop_down_item" href="javascript:">退出登录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="always_show">
+                            <a href="javascript:">帮助</a>
+                            <a href="javascript:">在线客服</a>
+                        </div>
+
+                    </div>        
+                </div>
+            </div>
+            <div class="main_nav">
+                <div class="init_main">
+                    <div class="main_row">
+                        <a href="javascript:" class="main_logo"></a>
+                        <div class="inner_main">
+                            <div class="main_search">
+                                <a href="javascript:">
+                                    <i class="iconfont icon-gouwuche icon_top"></i>
+                                </a>
+                                <div class="search_bar">
+                                    <div class="search_button">
+                                        <i class="iconfont icon-sousuo icon_top"></i>
+                                    </div>
+                                    <input type="text" maxlength="100" class="search_input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed_nav">
+                    <div class="row">
+                        <a href="javascript:" class="smalllogo"></a>
+                        <div class="inner_main">
+                            
+                            <ul class="nav_ul" id="nav_ul">
+                                <li class="nav_li first active">
+                                    <a href="javascript:">首页</a>
+                                </li>
+                                <li class="nav_li">
+                                    <a href="javascript:">食品酒水</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-jianguo icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">坚果蜜饯</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-liangyou icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">米面粮油</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yan icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">速食调味</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-xiuxianshipin icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">休闲食品</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-chongdiaochayin icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">水饮冲调</p>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav_li">
+                                    <a href="javascript:">日用洗护</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-mianbuhuli icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">面部护理</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-1 icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">身体护理</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-toufa icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">洗发护发</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yashua icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">口腔护理</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-4 icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">清洁用品</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav_li">
+                                    <a href="javascript:">家电数码</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-weibolu icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">厨房家电</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-shenghuodianqi icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">生活电器</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-dianshi icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">家庭影音</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-xiyiji icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">白色家电</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-shouji icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">手机通讯</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-shumajiadian icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">摄影摄像</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-erji1 icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">数码配件</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-zhinengyingjian icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">智能硬件</p>
+                                                    </a>
+                                                </li>
+
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yinfu icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">影音娱乐</p>
+                                                    </a>
+                                                </li>
+
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-shubiao icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">电脑外设</p>
+                                                    </a>
+                                                </li>                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav_li">
+                                    <a href="javascript:">服装箱包</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-nanzhuangpeishizhuanhuan icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">男装男鞋</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-lianyiqunzhuanhuan icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">女装女鞋</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-nantong icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">童装童鞋</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-peishi icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">内衣配饰</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-nvbao icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">潮流女包</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-nanshibeibao icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">精品男包</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-lvhangxiang icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">功能箱包</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav_li">
+                                    <a href="javascript:">家居生活</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-chuanglian icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">家装软饰</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-shafa icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">家居建材</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-kongjian11 icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">厨房卫浴</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-dengshizhaoming icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">灯饰照明</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-chuang icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">床上用品</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-youhaowushouna icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">收纳整理</p>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav_li">
+                                    <a href="javascript:">玩具母婴</a>
+                                    <div class="nav_dropdown">
+                                        <div class="card_list">
+                                            <ul class="card_item_list">
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-naiping icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">营养辅食</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-icon icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">尿裤湿巾</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yingerche icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">童车童床</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yingtongweiyu icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">婴童洗护</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="item">
+                                                    <a href="javascript:" class="url_nav_drop">
+                                                        <i class="iconfont icon-yingtongfushi icon_nav_drop"></i>
+                                                        <p class="title_nav_drop">婴童服饰</p>
+                                                    </a>
+                                                </li>
+                                                
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="user_info">
+                                <div class="before_login_s">
+                                    <a href="javascript:">登录</a>
+                                    <a href="javascript:">注册</a>
+                                </div>
+                                <div class="after_login_s" onmouseover="rotate_arrow(1)" onmouseout="reset_arrow(1)">
+                                    <div class="user_center_s">
+                                        <a href="javascript:">
+                                            <i class="iconfont icon-wode icon_top"></i>                                        
+                                        </a>
+                                        <div class="drop_down_block_s">
+                                            <div class="drop_down_menu">
+                                                <a class="drop_down_item" href="javascript:">个人中心</a>
+                                                <a class="drop_down_item" href="javascript:">订单管理</a>
+                                                <a class="drop_down_item" href="javascript:">商品收藏</a>
+                                                <a class="drop_down_item" href="javascript:">退出登录</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="always_show_s">
+                                    <a href="javascript:">
+                                        <i class="iconfont icon-gouwuche icon_top"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>           
+        </div>
+
+
+        <div class="main">
+                <div clsss="row" id="order_row">
+                    <div class="order_main">
+                        <!--地址管理-->
+                        <div class="user_address_selection">
+                            <div class="address_title">
+                                收货信息
+                            </div>
+                            <div class="address_info">
+                                <div class="address_left">
+                                    <p class="address_line line1">
+                                        <i class="iconfont icon-iconfontdizhi icon_location"></i>
+                                        <span class="edit_address">修改</span>
+                                    </p>
+                                    <p class="address_line">
+                                        <label>收 货 人：</label>
+                                        <span class="text" id="show_name">王</span>
+                                    </p>
+                                    <p class="address_line">
+                                        <label>联系方式：</label>
+                                        <span class="text" id="show_contact">10010</span>
+                                    </p>
+                                    <p class="address_line">
+                                        <label>联系地址：</label>
+                                        <span class="text" id="show_address">辽宁省沈阳市</span>
+                                    </p>
+                                </div>
+                                <div class="address_right">
+                                    <a href="javascript:" class="switch_address">切换地址</a>
+                                    <button class="new_address">新建地址</button>
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order_info_content">
+                               <div class="order_list">
+                                    <table class="order_item">
+                                        <tbody>
+
+                                            <tr class="head">
+                                                <td class="col1">商品信息</td>
+                                                <td class="col2"></td>
+                                                <td class="col3">单价</td>
+                                                <td class="col4">数量</td>
+                                                <td class="col5">小计</td>
+                                                <td class="col6">实付</td>
+                                            </tr>
+                                            
+                                            <tr class="body">
+                                                <td class="col1">
+                                                    <img src="images/defaultblack.png" class="item_image">
+                                                </td>
+                                                <td class="col2">
+                                                    <p class="item_name">
+                                                        情怀
+                                                    </p>
+                                                </td>
+                                                <td class="col3">
+                                                    <p class="item_single">
+                                                        ￥45
+                                                    </p>
+                                                </td>
+                                                <td  class="col4">
+                                                    <p class="item_num">
+                                                        4
+                                                    </p>
+                                                </td>
+                                                <td class="col5">
+                                                    <p class="item_sum">
+                                                        ￥190
+                                                    </p>
+                                                </td>
+                                                <td class="col6">
+                                                    <p class="item_real">
+                                                        ￥190
+                                                    </p>                                                    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+                            </div>
+                            <div class="order_summary">
+                                <div class="left">
+                                    
+                                </div>
+                                <div class="right">     
+                                    <div class="line">
+                                        <label>商品合计：</label>
+                                        <span>￥190.00</span>
+                                    </div>
+                                    <div class="line">
+                                        <label>运费：</label>
+                                        <span>￥0.00</span>  
+                                    </div>
+                                    <div class="line split"></div>
+                                    <div class="line">
+                                        <label>应付总额：</label>
+                                        <span class="sum_needed">￥190.00</span>
+                                    </div>
+                                    <div class="line">
+                                        <button class="pay_button">付款</button>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+ 
+        </div>
+
+
+        <div class="footer">
+            <div class="footer_top">
+                <div class="row">
+                    <div class="intro_list">
+                        <ul class="clearfix">
+                            <li>
+                                <i class="iconfont icon-shouquanzhengpin icon_bottom"></i>
+                                <p class="icon_info">100% 正品保证</p>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-wuyoushouhou icon_bottom"></i>
+                                <p class="icon_info">30 天无忧退换货</p>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-kefu1 icon_bottom"></i>
+                                <p class="icon_info">24 小时在线客服</p>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-baoyou icon_bottom"></i>
+                                <p class="icon_info">全场满 88 包邮</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="row">
+                      <ul class="clearfix">
+                            <li class="left_bottom">
+                                <a href="javascript:" class="logo_bottom">&nbsp;</a>
+                            </li>
+                            <li class="right_bottom">
+                                <p class="bottom_title">关于我们</p>
+                                <p class="bottom_content">
+                                    <a href="javascript:">公司介绍</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">联系我们</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">客户服务</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">支付方式</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">配送服务</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">退货流程</a> &nbsp;|&nbsp;
+                                    <a href="javascript:">常见问题</a>
+                                </p>
+                                <p class="bottom_content">京西公司 版权所有 &copy;2017</p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="edit_widgetcontainer">
+            <div class="mask_widget"></div>
+            <div class="address_widget">
+                <i class="iconfont icon-shanchu1 close_form"></i>
+                <form class="address_form">
+                    <div class="address_form_title">新建地址</div>
+                    <div class="address_form_item">
+                        <label class="detail_title">详细地址:</label>
+                        <textarea cols="75" rows="8" id="address_detail" name="address_detail" required="required"></textarea>
+                    </div>
+                    <div class="address_form_item">
+                        <div class="address_left">
+                            <label>联系方式:</label>
+                            <input type="text" name="address_contact" id="address_contact" required="required">
+                        </div>
+                        <div class="address_right">
+                            <label>收货人:</label>
+                            <input type="text" name="address_receiver_name" id="address_receiver_name" required="required">
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+
+                    <div class="address_form_item form_button">
+                        <input type="submit" class="address_submit" value="保存">
+                        <a href="javascript:" class="cancel_button">取消</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="switch_widgetcontainer">
+            <div class="mask_widget"></div>
+            <div class="switch_widget">
+                <i class="iconfont icon-shanchu1 close_form"></i>
+                    <div class="switch_title">选择地址</div>
+                    <div class="switch_list">
+
+                        <div class="switch_item active">
+                            <p class="address_line select_name">
+                                <label>收 货 人：</label>
+                                <span class="text">王</span>
+                            </p>
+                            <p class="address_line select_contact">
+                                <label>联系方式：</label>
+                                <span class="text">10010</span>
+                            </p>
+                            <p class="address_line select_address">
+                                <label>联系地址：</label>
+                                <span class="text">辽宁省沈阳市</span>
+                            </p>
+                        </div>
+
+                        <div class="switch_item">
+                            <p class="address_line select_name">
+                                <label>收 货 人：</label>
+                                <span class="text">吴</span>
+                            </p>
+                            <p class="address_line select_contact">
+                                <label>联系方式：</label>
+                                <span class="text">10086</span>
+                            </p>
+                            <p class="address_line select_address">
+                                <label>联系地址：</label>
+                                <span class="text">广东省汕头市</span>
+                            </p>
+                        </div>
+                    
+                    </div>
+
+                    <div class="form_button">
+                        <a href="javascript:" class="submit_button">确定</a>
+                        <a href="javascript:" class="cancel_button">取消</a>
+                    </div>
+
+ 
+            </div>
+        </div>
+
+        <script src="js/top_bottom.js"></script>
+        <script src="js/all.js"></script>
+        <script src="js/order.js"></script>
+    </body>
+</html>
