@@ -58,7 +58,7 @@
                                         <label>密码</label>
                                     </div>
                                     <div class="reg_input">
-                                        <input type="password">
+                                        <input type="password" id="password">
                                     </div>
                                     <div class="clear">
                                     </div>
@@ -163,7 +163,9 @@
                 $('.nickName_tip').hide();             
             });
             $('#repeatPass').change(function(){
-                $('.repeat_tip').show();
+                if($('#password').val()!=$('#repeatPass').val()){
+                    $('.repeat_tip').show();
+                }                
             });
             $('#repeatPass').focus(function(){
                 $('.repeat_tip').hide();
